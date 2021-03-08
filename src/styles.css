@@ -1,0 +1,158 @@
+* {
+  letter-spacing: 1px;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-systrem, BlinkMacSystremFont, avenir next, avenir,
+    helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  background: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+#root {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container > * {
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+/* Steps */
+.step-list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.step-list > li {
+  width: inherit;
+  height: inherit;
+}
+
+.step-overlay {
+  position: absolute;
+  z-index: 1;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.step-overlay > button {
+  cursor: pointer;
+  color: gray;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  font-size: 24px;
+  height: 40px;
+  width: 30px;
+}
+
+.step-item {
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  width: 100%;
+}
+
+.step-image,
+.step-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.step-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.step-content {
+  padding: 1rem;
+}
+
+.step-content small {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+/* Steps navigation */
+.step-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-item {
+  width: 15%;
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid gray;
+  opacity: 0.5;
+  will-change: opacity;
+  transition: opacity 225ms;
+}
+
+.nav-item.active,
+.nav-item:hover {
+  opacity: 1;
+}
+
+.nav-item.active {
+  border-bottom-color: blue;
+}
+
+.nav-button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.nav-image {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
