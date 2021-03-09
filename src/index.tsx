@@ -13,31 +13,31 @@ type Step = {
 
 const steps: Array<Step> = [
   {
-    title: "Start",
+    title: "Sinh đồ",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat sodales tempor.",
     imageUrl:
-      "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1504&q=80",
+      "https://i.imgur.com/EaCy4Fi.png",
     isActive: false
   },
   {
-    title: "Two",
+    title: "Học sĩ",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat sodales tempor.",
     imageUrl:
-      "https://images.unsplash.com/photo-1457364983758-510f8afa9f5f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=1500&q=80",
+      "https://i.imgur.com/P4TZcrz.png",
     isActive: false
   },
   {
-    title: "Three",
+    title: "Tú tài",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat sodales tempor.",
     imageUrl:
-      "https://images.unsplash.com/photo-1460186136353-977e9d6085a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+      "https://i.imgur.com/0hPtBHR.png",
     isActive: false
   },
   {
-    title: "Four",
+    title: "Phó bảng",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat sodales tempor.",
     imageUrl:
@@ -45,21 +45,13 @@ const steps: Array<Step> = [
     isActive: false
   },
   {
-    title: "Five",
+    title: "Trạng nguyên",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat sodales tempor.",
     imageUrl:
       "https://images.unsplash.com/photo-1517052269751-4ae3ad86cc59?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80",
     isActive: false
   },
-  {
-    title: "Next",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat sodales tempor.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1494022299300-899b96e49893?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
-    isActive: false
-  }
 ];
 
 function App() {
@@ -110,8 +102,6 @@ function App() {
               </div>
               <div className="step-content">
                 <h2>
-                  <small>Step {item + 1}</small>
-                  <br />
                   {step.title}
                 </h2>
                 <p>{step.description}</p>
@@ -131,7 +121,7 @@ function App() {
                 onClick={() => setIndex(index)}
               >
                 <img src={step.imageUrl} className="nav-image" />
-                <p className="nav-content">{`${index + 1}. ${step.title}`}</p>
+                <p>{`${step.title}`}</p>
               </button>
             </li>
           );
